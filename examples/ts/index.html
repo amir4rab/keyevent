@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>
+        Ts: Press <span class="buttonSpan">A</span> and <span class="buttonSpan">Control Left</span> to show hidden popup
+      </h1>
+      <p>
+        ps: <span class="buttonSpan">A</span> and <span class="buttonSpan">Left shift</span> to should not open the hidden popup!
+      </p>
+      <div class="hidden" id="superHiddenPopup">
+        <h3>
+          YOU HAVE FOUND THE SECRET POPUP! 👻
+        </h3>
+        <p>
+          Press <span class="buttonSpan">Z</span> and <span class="buttonSpan">Control Left</span> to close the Popup!
+        </p>
+        <button id="hidePopupButton">
+          X
+        </button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts" defer></script>
+  </body>
+</html>
