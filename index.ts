@@ -1,4 +1,4 @@
-export const KeyEventManager = class {
+export const KeyEvent = class {
   #events: Map<string, Function>;
   #currentKeyCodes: string[];
   #currentKeydownEventFunction: Function | null;
@@ -15,7 +15,25 @@ export const KeyEventManager = class {
     this.#setUpKeydownEventListener()
   }
 
+  #validateKeyCombination = ( keyCombination: string[] ): Boolean => {
+    if ( !Array.isArray(keyCombination) ) {
+      console.error(`First input of addEvent must be an Array!`);
+      return false;
+    }
+    if ( keyCombination.length <= 0 ) {
+      console.error(`First input of addEvent must have length of more than 0!`);
+      return false;
+    }
+    return true;
+  }
+
   addEvent = ( keyCombination: string[], eventFn:Function ): void => {
+    if ( typeof eventFn !== 'function' ) {
+      console.error(`Second input of addEvent must be a Function!`);
+      return;
+    }
+    if ( !this.#validateKeyCombination(keyCombination) ) return;
+    
     const keyCombinationString = keyCombination.sort().join('');
     if ( this.#events.has( keyCombinationString ) ) {
       console.warn('This key combination has been added before!');
@@ -27,6 +45,8 @@ export const KeyEventManager = class {
   }
 
   removeEvent = ( keyCombination: string[] ) => { 
+    if ( !this.#validateKeyCombination(keyCombination) ) return;
+
     const keyCombinationString = keyCombination.sort().join('');
     this.#events.delete( keyCombinationString );
   }
@@ -45,4 +65,4 @@ export const KeyEventManager = class {
   }
 }
 
-export default KeyEventManager;
+export default KeyEvent;

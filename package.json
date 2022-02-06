@@ -1,6 +1,11 @@
 {
   "name": "@amir4rab/keyevent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.ts",
-  "scripts": {}
+  "scripts": {},
+  "repository": "https://github.com/amir4rab/keyevent",
+  "bugs": "https://github.com/amir4rab/keyeven/issues",
+  "homepage": "https://github.com/amir4rab/keyevent",
+  "license": "MPL-2.0 License",
+  "readme": "https://github.com/amir4rab/keyevent#readme"
 }
