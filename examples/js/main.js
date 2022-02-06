@@ -1,5 +1,5 @@
 // import './style.css'
-import KeyEventManager from '../../src/index';
+import KeyEventManager from '../../index';
 
 const superHiddenPopup = document.getElementById('superHiddenPopup');
 document.getElementById('hidePopupButton').addEventListener('click', _ => { superHiddenPopup.className = 'hidden' } );
@@ -11,3 +11,5 @@ keyEventManager.addEvent( [ 'KeyZ', 'ControlLeft' ], _ => { superHiddenPopup.cla
 
 keyEventManager.addEvent( [ 'KeyA', 'LeftShift' ], _ => { superHiddenPopup.className = 'show' } );
 keyEventManager.removeEvent([ 'KeyA', 'LeftShift' ])
+
+keyEventManager.removeEvent([ 'KeyF', 'LeftShift' ]);
