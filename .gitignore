@@ -1,3 +1,5 @@
-examples/js/node_modules
-examples/ts/node_modules
-index.js
+*.log
+.DS_Store
+node_modules
+dist
+legacy/*

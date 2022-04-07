@@ -63,6 +63,4 @@ export const KeyEvent = class {
     document.body.addEventListener( 'keydown', ( e: KeyboardEvent ) => this.#currentKeydownEventFunction!(e) );
 
   }
-}
-
-export default KeyEvent;
+};

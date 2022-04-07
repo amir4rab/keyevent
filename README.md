@@ -9,9 +9,7 @@ npm install @amir4rab/keyevent@latest
 
 ### Importing
 ```javascript
-import KeyEvent from '@amir4rab/keyevent'; // typescript implementation
-// or
-import KeyEvent from '@amir4rab/keyevent/js/index'; // compiled version in javascript
+import KeyEvent from '@amir4rab/keyevent';
 ```
 
 ### Usage
